@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C2702C020EE7B5B0094C3B5 /* WMCAnnotationDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2702BF20EE7B5B0094C3B5 /* WMCAnnotationDetailView.m */; };
+		4C2702C220EE7B740094C3B5 /* WMCAnnotationDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2702C120EE7B740094C3B5 /* WMCAnnotationDetailView.xib */; };
+		D244053F20E791C700A4DAB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D244053E20E791C700A4DAB0 /* AppDelegate.m */; };
+		D244054520E791C700A4DAB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D244054320E791C700A4DAB0 /* Main.storyboard */; };
+		D244054720E791D300A4DAB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D244054620E791D300A4DAB0 /* Assets.xcassets */; };
+		D244054A20E791D300A4DAB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D244054820E791D300A4DAB0 /* LaunchScreen.storyboard */; };
+		D244054D20E791D300A4DAB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D244054C20E791D300A4DAB0 /* main.m */; };
+		D244055520E7939900A4DAB0 /* WMCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D244055420E7939900A4DAB0 /* WMCHomeViewController.m */; };
+		D244055820E7A72500A4DAB0 /* WMCUsersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D244055720E7A72500A4DAB0 /* WMCUsersListViewController.m */; };
+		D244055B20E7B05700A4DAB0 /* WMCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D244055A20E7B05700A4DAB0 /* WMCUser.m */; };
+		D244055E20E82A6000A4DAB0 /* WMCVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = D244055D20E82A6000A4DAB0 /* WMCVehicle.m */; };
+		D244056120E917D400A4DAB0 /* WMCUsersStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D244056020E917D400A4DAB0 /* WMCUsersStore.m */; };
+		D244056820E9630D00A4DAB0 /* UIImage+WMC.m in Sources */ = {isa = PBXBuildFile; fileRef = D244056720E9630D00A4DAB0 /* UIImage+WMC.m */; };
+		D244056B20E96D1C00A4DAB0 /* UIColor+WMC.m in Sources */ = {isa = PBXBuildFile; fileRef = D244056A20E96D1C00A4DAB0 /* UIColor+WMC.m */; };
+		D244056E20EB6D0300A4DAB0 /* WMCControlCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D244056D20EB6D0200A4DAB0 /* WMCControlCenter.m */; };
+		D244057120EB9AB300A4DAB0 /* WMCUsersMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D244057020EB9AB300A4DAB0 /* WMCUsersMapViewController.m */; };
+		D244057420EC316800A4DAB0 /* WMCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D244057320EC316700A4DAB0 /* WMCAnnotation.m */; };
+		D244057720ECBEF400A4DAB0 /* WMCUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D244057620ECBEF300A4DAB0 /* WMCUserCell.xib */; };
+		D244057A20ECC27000A4DAB0 /* WMCUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D244057920ECC27000A4DAB0 /* WMCUserCell.m */; };
+		D244057F20ECCC2A00A4DAB0 /* WMCDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D244057E20ECCC2A00A4DAB0 /* WMCDefinitions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C2702BE20EE7B5B0094C3B5 /* WMCAnnotationDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCAnnotationDetailView.h; sourceTree = "<group>"; };
+		4C2702BF20EE7B5B0094C3B5 /* WMCAnnotationDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCAnnotationDetailView.m; sourceTree = "<group>"; };
+		4C2702C120EE7B740094C3B5 /* WMCAnnotationDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMCAnnotationDetailView.xib; sourceTree = "<group>"; };
+		D244053A20E791C700A4DAB0 /* WhereIsMyCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsMyCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D244053D20E791C700A4DAB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D244053E20E791C700A4DAB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D244054420E791C700A4DAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D244054620E791D300A4DAB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D244054920E791D300A4DAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D244054B20E791D300A4DAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D244054C20E791D300A4DAB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D244055320E7939900A4DAB0 /* WMCHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCHomeViewController.h; sourceTree = "<group>"; };
+		D244055420E7939900A4DAB0 /* WMCHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCHomeViewController.m; sourceTree = "<group>"; };
+		D244055620E7A72500A4DAB0 /* WMCUsersListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCUsersListViewController.h; sourceTree = "<group>"; };
+		D244055720E7A72500A4DAB0 /* WMCUsersListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCUsersListViewController.m; sourceTree = "<group>"; };
+		D244055920E7B05700A4DAB0 /* WMCUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCUser.h; sourceTree = "<group>"; };
+		D244055A20E7B05700A4DAB0 /* WMCUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCUser.m; sourceTree = "<group>"; };
+		D244055C20E82A5F00A4DAB0 /* WMCVehicle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCVehicle.h; sourceTree = "<group>"; };
+		D244055D20E82A6000A4DAB0 /* WMCVehicle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCVehicle.m; sourceTree = "<group>"; };
+		D244055F20E917D400A4DAB0 /* WMCUsersStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCUsersStore.h; sourceTree = "<group>"; };
+		D244056020E917D400A4DAB0 /* WMCUsersStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCUsersStore.m; sourceTree = "<group>"; };
+		D244056620E9630D00A4DAB0 /* UIImage+WMC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+WMC.h"; sourceTree = "<group>"; };
+		D244056720E9630D00A4DAB0 /* UIImage+WMC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WMC.m"; sourceTree = "<group>"; };
+		D244056920E96D1C00A4DAB0 /* UIColor+WMC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+WMC.h"; sourceTree = "<group>"; };
+		D244056A20E96D1C00A4DAB0 /* UIColor+WMC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WMC.m"; sourceTree = "<group>"; };
+		D244056C20EB6D0200A4DAB0 /* WMCControlCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCControlCenter.h; sourceTree = "<group>"; };
+		D244056D20EB6D0200A4DAB0 /* WMCControlCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCControlCenter.m; sourceTree = "<group>"; };
+		D244056F20EB9AB300A4DAB0 /* WMCUsersMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCUsersMapViewController.h; sourceTree = "<group>"; };
+		D244057020EB9AB300A4DAB0 /* WMCUsersMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCUsersMapViewController.m; sourceTree = "<group>"; };
+		D244057220EC316700A4DAB0 /* WMCAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCAnnotation.h; sourceTree = "<group>"; };
+		D244057320EC316700A4DAB0 /* WMCAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCAnnotation.m; sourceTree = "<group>"; };
+		D244057620ECBEF300A4DAB0 /* WMCUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMCUserCell.xib; sourceTree = "<group>"; };
+		D244057820ECC27000A4DAB0 /* WMCUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCUserCell.h; sourceTree = "<group>"; };
+		D244057920ECC27000A4DAB0 /* WMCUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCUserCell.m; sourceTree = "<group>"; };
+		D244057E20ECCC2A00A4DAB0 /* WMCDefinitions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCDefinitions.m; sourceTree = "<group>"; };
+		D244058020ECCC4A00A4DAB0 /* WMCDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCDefinitions.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D244053720E791C700A4DAB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D244053120E791C700A4DAB0 = {
+			isa = PBXGroup;
+			children = (
+				D244053C20E791C700A4DAB0 /* WhereIsMyCar */,
+				D244053B20E791C700A4DAB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D244053B20E791C700A4DAB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D244053A20E791C700A4DAB0 /* WhereIsMyCar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D244053C20E791C700A4DAB0 /* WhereIsMyCar */ = {
+			isa = PBXGroup;
+			children = (
+				D244057C20ECCA9300A4DAB0 /* Util */,
+				D244057520ECBE0600A4DAB0 /* View */,
+				D244056520E9627400A4DAB0 /* Storyboard */,
+				D244056420E9626100A4DAB0 /* Category */,
+				D244056220E9624100A4DAB0 /* Model */,
+				D244056320E9624E00A4DAB0 /* Controller */,
+				D244053D20E791C700A4DAB0 /* AppDelegate.h */,
+				D244053E20E791C700A4DAB0 /* AppDelegate.m */,
+				D244054620E791D300A4DAB0 /* Assets.xcassets */,
+				D244054B20E791D300A4DAB0 /* Info.plist */,
+				D244054C20E791D300A4DAB0 /* main.m */,
+			);
+			path = WhereIsMyCar;
+			sourceTree = "<group>";
+		};
+		D244056220E9624100A4DAB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D244057B20ECCA6A00A4DAB0 /* Util */,
+				D244055920E7B05700A4DAB0 /* WMCUser.h */,
+				D244055A20E7B05700A4DAB0 /* WMCUser.m */,
+				D244055C20E82A5F00A4DAB0 /* WMCVehicle.h */,
+				D244055D20E82A6000A4DAB0 /* WMCVehicle.m */,
+				D244055F20E917D400A4DAB0 /* WMCUsersStore.h */,
+				D244056020E917D400A4DAB0 /* WMCUsersStore.m */,
+				D244057220EC316700A4DAB0 /* WMCAnnotation.h */,
+				D244057320EC316700A4DAB0 /* WMCAnnotation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D244056320E9624E00A4DAB0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D244055320E7939900A4DAB0 /* WMCHomeViewController.h */,
+				D244055420E7939900A4DAB0 /* WMCHomeViewController.m */,
+				D244055620E7A72500A4DAB0 /* WMCUsersListViewController.h */,
+				D244055720E7A72500A4DAB0 /* WMCUsersListViewController.m */,
+				D244056F20EB9AB300A4DAB0 /* WMCUsersMapViewController.h */,
+				D244057020EB9AB300A4DAB0 /* WMCUsersMapViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D244056420E9626100A4DAB0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D244056620E9630D00A4DAB0 /* UIImage+WMC.h */,
+				D244056720E9630D00A4DAB0 /* UIImage+WMC.m */,
+				D244056920E96D1C00A4DAB0 /* UIColor+WMC.h */,
+				D244056A20E96D1C00A4DAB0 /* UIColor+WMC.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D244056520E9627400A4DAB0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D244054820E791D300A4DAB0 /* LaunchScreen.storyboard */,
+				D244054320E791C700A4DAB0 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D244057520ECBE0600A4DAB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D244057620ECBEF300A4DAB0 /* WMCUserCell.xib */,
+				D244057820ECC27000A4DAB0 /* WMCUserCell.h */,
+				D244057920ECC27000A4DAB0 /* WMCUserCell.m */,
+				4C2702BE20EE7B5B0094C3B5 /* WMCAnnotationDetailView.h */,
+				4C2702BF20EE7B5B0094C3B5 /* WMCAnnotationDetailView.m */,
+				4C2702C120EE7B740094C3B5 /* WMCAnnotationDetailView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D244057B20ECCA6A00A4DAB0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D244056C20EB6D0200A4DAB0 /* WMCControlCenter.h */,
+				D244056D20EB6D0200A4DAB0 /* WMCControlCenter.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D244057C20ECCA9300A4DAB0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D244058020ECCC4A00A4DAB0 /* WMCDefinitions.h */,
+				D244057E20ECCC2A00A4DAB0 /* WMCDefinitions.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D244053920E791C700A4DAB0 /* WhereIsMyCar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D244055020E791D300A4DAB0 /* Build configuration list for PBXNativeTarget "WhereIsMyCar" */;
+			buildPhases = (
+				D244053620E791C700A4DAB0 /* Sources */,
+				D244053720E791C700A4DAB0 /* Frameworks */,
+				D244053820E791C700A4DAB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhereIsMyCar;
+			productName = WhereIsMyCar;
+			productReference = D244053A20E791C700A4DAB0 /* WhereIsMyCar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D244053220E791C700A4DAB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Vadim's Projects";
+				TargetAttributes = {
+					D244053920E791C700A4DAB0 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = D244053520E791C700A4DAB0 /* Build configuration list for PBXProject "WhereIsMyCar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D244053120E791C700A4DAB0;
+			productRefGroup = D244053B20E791C700A4DAB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D244053920E791C700A4DAB0 /* WhereIsMyCar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D244053820E791C700A4DAB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D244054A20E791D300A4DAB0 /* LaunchScreen.storyboard in Resources */,
+				D244054720E791D300A4DAB0 /* Assets.xcassets in Resources */,
+				4C2702C220EE7B740094C3B5 /* WMCAnnotationDetailView.xib in Resources */,
+				D244057720ECBEF400A4DAB0 /* WMCUserCell.xib in Resources */,
+				D244054520E791C700A4DAB0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D244053620E791C700A4DAB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D244057420EC316800A4DAB0 /* WMCAnnotation.m in Sources */,
+				D244057120EB9AB300A4DAB0 /* WMCUsersMapViewController.m in Sources */,
+				D244055520E7939900A4DAB0 /* WMCHomeViewController.m in Sources */,
+				D244055820E7A72500A4DAB0 /* WMCUsersListViewController.m in Sources */,
+				D244055E20E82A6000A4DAB0 /* WMCVehicle.m in Sources */,
+				D244056820E9630D00A4DAB0 /* UIImage+WMC.m in Sources */,
+				D244056E20EB6D0300A4DAB0 /* WMCControlCenter.m in Sources */,
+				D244055B20E7B05700A4DAB0 /* WMCUser.m in Sources */,
+				D244057F20ECCC2A00A4DAB0 /* WMCDefinitions.m in Sources */,
+				D244054D20E791D300A4DAB0 /* main.m in Sources */,
+				D244057A20ECC27000A4DAB0 /* WMCUserCell.m in Sources */,
+				D244053F20E791C700A4DAB0 /* AppDelegate.m in Sources */,
+				4C2702C020EE7B5B0094C3B5 /* WMCAnnotationDetailView.m in Sources */,
+				D244056B20E96D1C00A4DAB0 /* UIColor+WMC.m in Sources */,
+				D244056120E917D400A4DAB0 /* WMCUsersStore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D244054320E791C700A4DAB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D244054420E791C700A4DAB0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D244054820E791D300A4DAB0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D244054920E791D300A4DAB0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D244054E20E791D300A4DAB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D244054F20E791D300A4DAB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D244055120E791D300A4DAB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VU9T5K6KZV;
+				INFOPLIST_FILE = WhereIsMyCar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vadims.projects.WhereIsMyCar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D244055220E791D300A4DAB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VU9T5K6KZV;
+				INFOPLIST_FILE = WhereIsMyCar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vadims.projects.WhereIsMyCar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D244053520E791C700A4DAB0 /* Build configuration list for PBXProject "WhereIsMyCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D244054E20E791D300A4DAB0 /* Debug */,
+				D244054F20E791D300A4DAB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D244055020E791D300A4DAB0 /* Build configuration list for PBXNativeTarget "WhereIsMyCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D244055120E791D300A4DAB0 /* Debug */,
+				D244055220E791D300A4DAB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D244053220E791C700A4DAB0 /* Project object */;
+}
