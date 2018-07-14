@@ -7,6 +7,7 @@
 //
 
 #import "WMCUsersMapViewController.h"
+#import "UIViewController+WMC.h"
 #import "WMCUsersStore.h"
 #import "WMCAnnotation.h"
 #import <MapKit/MapKit.h>
@@ -127,6 +128,9 @@ NSString *const WCMAnnotationViewIdentifier = @"WCMCustomAnnotationViewIdentifie
 - (void)loadDataForProvidedUser
 {
     WeakSelf weakSelf = self;
+    
+    // === Showing activity indicator ===
+    [self showActivityIndicator];
 
     [USERS_STORE receiveUserVehiclesCoordinates:self.providedUser withCompletion:^(NSDictionary *userVehiclesLocations, NSError *error) {
         
@@ -144,9 +148,16 @@ NSString *const WCMAnnotationViewIdentifier = @"WCMCustomAnnotationViewIdentifie
                                                       forLocation:[allVehiclesCoordinatesDict objectForKey:vehicle.identifier]];
                 }
             }
+            // === Hiding activity indicator ===
+            [weakSelf hideActivityIndicator];
         } else {
             // === Console output ===
             NSLog(@"- (void)loadData: receiveUserVehiclesCoordinatesWithCompletion: No Data received");
+            
+            // === Hiding activity indicator ===
+            [weakSelf hideActivityIndicator];
+            
+            // === Showing alert view ===
             [weakSelf showAlertViewController];
         }
     }];
@@ -155,6 +166,9 @@ NSString *const WCMAnnotationViewIdentifier = @"WCMCustomAnnotationViewIdentifie
 - (void)loadDataForAllUsers
 {
     WeakSelf weakSelf = self;
+    
+    // Showing activity indicator
+    [self showActivityIndicator];
 
     [USERS_STORE receiveUsersVehiclesCoordinatesForUsers:USERS_STORE.allUsers withCompletion:^(NSDictionary *usersVehiclesLocations, NSError *error) {
         
@@ -176,8 +190,16 @@ NSString *const WCMAnnotationViewIdentifier = @"WCMCustomAnnotationViewIdentifie
                     }
                 }
             }
+            
+            // Hiding activity indicator
+            [weakSelf hideActivityIndicator];
         } else {
             NSLog(@"- (void)loadData: receiveUsersVehiclesCoordinatesWithCompletion: No Data received");
+            
+            // Hiding activity indicator
+            [weakSelf hideActivityIndicator];
+            
+            // Showing alert view
             [weakSelf showAlertViewController];
         }
     }];

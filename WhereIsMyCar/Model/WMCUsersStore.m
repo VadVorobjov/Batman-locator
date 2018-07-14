@@ -129,7 +129,7 @@ double const WMCCachedTimeInterval = 30.0;
 
 #pragma mark - Methods
 
-- (void)parseUsersDataFromJsonObjectWithData:(NSDictionary *)jsonData
+- (void)parseUsersDataFromJsonObjectWithData:(NSDictionary *)jsonData withCompletion:(void (^)(BOOL))completion
 {
     // Group for waiting download of all images before invoking completion block
     dispatch_group_t imageDownloadGroup = dispatch_group_create();
@@ -138,75 +138,85 @@ double const WMCCachedTimeInterval = 30.0;
     NSDictionary *usersDict = [[NSMutableDictionary alloc] init];
     NSDictionary *vehiclesDict = [[NSMutableDictionary alloc] init];
 
-    for (NSDictionary *dict in jsonData[@"data"]) {
-        // Check if we have 'owner' data. Otherwise we consider whole current data batch as inconsistent.
-        if ([self checkValueIn:dict forKey:@"owner"]) {
-            @try {
-                numberId = dict[@"userid"];
-                usersDict = dict[@"owner"];
-                vehiclesDict = dict[@"vehicles"];
+    // === For any possible error during JSON parsing ===
+    @try {
+        for (NSDictionary *dict in jsonData[@"data"]) {
+            // Check if we have 'owner' data. Otherwise we consider whole current data batch as inconsistent.
+            if ([self checkValueIn:dict forKey:@"owner"]) {
                 
-                WMCUser *user = [[WMCUser alloc] init];
+                    numberId = dict[@"userid"];
+                    usersDict = dict[@"owner"];
+                    vehiclesDict = dict[@"vehicles"];
                 
-                // Parsing 'Owner' data
-                user.identifier = [self checkValueIn:dict forKey:@"userid"] ? numberId.stringValue : @"";
-                user.name = [self checkValueIn:usersDict forKey:@"name"] ? usersDict[@"name"] : @"";
-                user.surname = [self checkValueIn:usersDict forKey:@"surname"] ? usersDict[@"surname"] : @"";
+                    WMCUser *user = [[WMCUser alloc] init];
                 
-                // Downloading & assigning image
-                dispatch_group_enter(imageDownloadGroup);
-                [UIImage downloadImageFromURL:usersDict[@"foto"] completionBlock:^(BOOL success, UIImage *image) {
-                    if (success) {
-                        user.photo = image;
-                    }
-                    dispatch_group_leave(imageDownloadGroup);
-                }];
+                    // Parsing 'Owner' data
+                    user.identifier = [self checkValueIn:dict forKey:@"userid"] ? numberId.stringValue : @"";
+                    user.name = [self checkValueIn:usersDict forKey:@"name"] ? usersDict[@"name"] : @"";
+                    user.surname = [self checkValueIn:usersDict forKey:@"surname"] ? usersDict[@"surname"] : @"";
                 
-                // Parsing 'Vehicles' data
-                for (NSDictionary *vehicle in vehiclesDict) {
-                    WMCVehicle *userVehicle = [[WMCVehicle alloc] init];
-                    
-                    numberId = vehicle[@"vehicleid"];
-                    userVehicle.identifier = [self checkValueIn:vehicle forKey:@"vehicleid"] ? numberId.stringValue : @"";
-                    userVehicle.color = [self checkValueIn:vehicle forKey:@"color"] ? [UIColor colorWithHexString:vehicle[@"color"]] : nil;
-                    userVehicle.make = [self checkValueIn:vehicle forKey:@"make"] ? vehicle[@"make"] : @"";
-                    userVehicle.model = [self checkValueIn:vehicle forKey:@"model"] ? vehicle[@"model"] : @"";
-                    userVehicle.vin = [self checkValueIn:vehicle forKey:@"vin"] ? vehicle[@"vin"] : @"";
-                    userVehicle.year = [self checkValueIn:vehicle forKey:@"year"] ? vehicle[@"year"] : @"";
-                    
                     // Downloading & assigning image
                     dispatch_group_enter(imageDownloadGroup);
-                    [UIImage downloadImageFromURL:vehicle[@"foto"] completionBlock:^(BOOL success, UIImage *image) {
-                        if (success && image) {
-                            userVehicle.photo = image;
-                        } else {
-                            userVehicle.photo = [UIImage imageNamed:@"Batcycle"];
+                    [UIImage downloadImageFromURL:usersDict[@"foto"] completionBlock:^(BOOL success, UIImage *image) {
+                        if (success) {
+                            user.photo = image;
                         }
                         dispatch_group_leave(imageDownloadGroup);
                     }];
-                    
-                    // Assigning vehicle data to user
-                    [user.vehicle addObject:userVehicle];
-                }
                 
-                // Adding User data to private array
-                [self.privateUsers addObject:user];
+                    // Parsing 'Vehicles' data
+                    for (NSDictionary *vehicle in vehiclesDict) {
+                        WMCVehicle *userVehicle = [[WMCVehicle alloc] init];
+                        
+                        numberId = vehicle[@"vehicleid"];
+                        userVehicle.identifier = [self checkValueIn:vehicle forKey:@"vehicleid"] ? numberId.stringValue : @"";
+                        userVehicle.color = [self checkValueIn:vehicle forKey:@"color"] ? [UIColor colorWithHexString:vehicle[@"color"]] : nil;
+                        userVehicle.make = [self checkValueIn:vehicle forKey:@"make"] ? vehicle[@"make"] : @"";
+                        userVehicle.model = [self checkValueIn:vehicle forKey:@"model"] ? vehicle[@"model"] : @"";
+                        userVehicle.vin = [self checkValueIn:vehicle forKey:@"vin"] ? vehicle[@"vin"] : @"";
+                        userVehicle.year = [self checkValueIn:vehicle forKey:@"year"] ? vehicle[@"year"] : @"";
+                        
+                        // Downloading & assigning image
+                        dispatch_group_enter(imageDownloadGroup);
+                        [UIImage downloadImageFromURL:vehicle[@"foto"] completionBlock:^(BOOL success, UIImage *image) {
+                            if (success && image) {
+                                userVehicle.photo = image;
+                            } else {
+                                userVehicle.photo = [UIImage imageNamed:@"Batcycle"];
+                            }
+                            dispatch_group_leave(imageDownloadGroup);
+                        }];
+                        
+                        // Assigning vehicle data to user
+                        [user.vehicle addObject:userVehicle];
+                    }
                 
-            } @catch (NSException *exception) {
-                // Console error output
-                NSLog(@"- (void)parseUsersDataFromJsonObjectWithData: Warning! JSON has inconsistent data %@", exception.description);
+                    // Adding User data to private array
+                    [self.privateUsers addObject:user];
             }
         }
-    }
     
-    // Invoked after all images are downloaded.
-    dispatch_group_notify(imageDownloadGroup, dispatch_get_main_queue(), ^{
-        // Console output
-        NSLog(@"- (void)parseUsersDataFromJsonObjectWithData: JSON data's parsing completed.");
+        // Invoked after all images are downloaded.
+        dispatch_group_notify(imageDownloadGroup, dispatch_get_main_queue(), ^{
+            // Console output
+            NSLog(@"- (void)parseUsersDataFromJsonObjectWithData: JSON data's parsing completed.");
+            
+            // Completion
+            completion(YES);
+            
+            // Send notification to controllers which rely on updated data
+            [[NSNotificationCenter defaultCenter] postNotificationName:WMCUsersStoreDidFinishUsersDataDownload object:nil];
+        });
         
-        // Send notification to controllers which rely on updated data
-        [[NSNotificationCenter defaultCenter] postNotificationName:WMCUsersStoreDidFinishUsersDataDownload object:nil];
-    });
+    } @catch (NSException *exception) {
+        // Console error output
+        NSLog(@"- (void)parseUsersDataFromJsonObjectWithData: Warning! JSON has inconsistent data %@", exception.description);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Completion
+            completion(NO);
+        });
+    }
 }
 
 - (void)receiveUsersVehiclesCoordinatesForUsers:(NSArray *)users withCompletion:(void (^)(NSDictionary * usersVehiclesLocations, NSError *error))completion

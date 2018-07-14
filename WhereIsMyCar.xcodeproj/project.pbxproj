@@ -27,6 +27,7 @@
 		D244057720ECBEF400A4DAB0 /* WMCUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D244057620ECBEF300A4DAB0 /* WMCUserCell.xib */; };
 		D244057A20ECC27000A4DAB0 /* WMCUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D244057920ECC27000A4DAB0 /* WMCUserCell.m */; };
 		D244057F20ECCC2A00A4DAB0 /* WMCDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D244057E20ECCC2A00A4DAB0 /* WMCDefinitions.m */; };
+		D2560E4220FA0EF40018B460 /* UIViewController+WMC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2560E4120FA0EF40018B460 /* UIViewController+WMC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,8 @@
 		D244057920ECC27000A4DAB0 /* WMCUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCUserCell.m; sourceTree = "<group>"; };
 		D244057E20ECCC2A00A4DAB0 /* WMCDefinitions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCDefinitions.m; sourceTree = "<group>"; };
 		D244058020ECCC4A00A4DAB0 /* WMCDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCDefinitions.h; sourceTree = "<group>"; };
+		D2560E4020FA0EF40018B460 /* UIViewController+WMC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WMC.h"; sourceTree = "<group>"; };
+		D2560E4120FA0EF40018B460 /* UIViewController+WMC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WMC.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				D244056720E9630D00A4DAB0 /* UIImage+WMC.m */,
 				D244056920E96D1C00A4DAB0 /* UIColor+WMC.h */,
 				D244056A20E96D1C00A4DAB0 /* UIColor+WMC.m */,
+				D2560E4020FA0EF40018B460 /* UIViewController+WMC.h */,
+				D2560E4120FA0EF40018B460 /* UIViewController+WMC.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2560E4220FA0EF40018B460 /* UIViewController+WMC.m in Sources */,
 				D244057420EC316800A4DAB0 /* WMCAnnotation.m in Sources */,
 				D244057120EB9AB300A4DAB0 /* WMCUsersMapViewController.m in Sources */,
 				D244055520E7939900A4DAB0 /* WMCHomeViewController.m in Sources */,
