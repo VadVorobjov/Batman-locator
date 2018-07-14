@@ -98,8 +98,10 @@
     // Console error output
     NSLog(@"- (void)loadData: error on executing dataTask: %@", error.localizedDescription);
     
-    // In case of Error - presenting Alert controller to the user
-    [self presentViewController:self.alertController animated:YES completion:nil];
+    if (error) {
+        // In case of Error - presenting Alert controller to the user
+        [self presentViewController:self.alertController animated:YES completion:nil];
+    }
     
     if (![NSThread isMainThread]) {
         // UI changes - executing on Main thread
