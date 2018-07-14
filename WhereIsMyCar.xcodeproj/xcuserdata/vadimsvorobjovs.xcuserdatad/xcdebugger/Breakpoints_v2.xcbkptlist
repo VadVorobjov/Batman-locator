@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIsMyCar/Model/WMCUsersStore.m"
-            timestampString = "552571379.710528"
+            timestampString = "553297228.3717149"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "-receiveUsersVehiclesCoordinatesForUsers:withCompletion:"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIsMyCar/Model/WMCUsersStore.m"
-            timestampString = "552571379.710708"
+            timestampString = "553297228.371859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "-receiveUsersVehiclesCoordinatesForUsers:withCompletion:"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIsMyCar/Controller/WMCUsersMapViewController.m"
-            timestampString = "552571379.710825"
+            timestampString = "553297228.3719831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
-            landmarkName = "-showAlertViewController"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "-centerMapByLocation:andLocationDistance:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIsMyCar/Model/WMCUsersStore.m"
-            timestampString = "552571379.710968"
+            timestampString = "553297228.37208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
             landmarkName = "-receiveUserVehiclesCoordinates:withCompletion:"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIsMyCar/Model/WMCUsersStore.m"
-            timestampString = "552571379.711077"
+            timestampString = "553297228.372207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
-            landmarkName = "-parseUsersDataFromJsonObjectWithData:"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "-parseUsersDataFromJsonObjectWithData:withCompletion:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

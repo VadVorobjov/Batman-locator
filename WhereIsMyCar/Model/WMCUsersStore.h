@@ -30,12 +30,14 @@ extern NSString *const WMCUsersStoreDidFinishUsersDataDownload;
 
 #pragma mark - Methods
 
+
 /**
  Parses provided JSON Object according to class's properties
-
+ 
  @param jsonData JSON Object for parsing
+ @param completion with indication of parsing success(YES/NO)
  */
-- (void)parseUsersDataFromJsonObjectWithData:(NSDictionary *)jsonData;
+- (void)parseUsersDataFromJsonObjectWithData:(NSDictionary *)jsonData withCompletion:(void (^)(BOOL success))completion;
 
 /**
  Parse JSON Object(provided in the method) for coordinates of vehicles of all Users

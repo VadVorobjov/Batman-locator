@@ -7,6 +7,7 @@
 //
 
 #import "WMCHomeViewController.h"
+#import "UIViewController+WMC.h"
 #import "WMCUsersListViewController.h"
 #import "WMCUsersStore.h"
 #import "WMCControlCenter.h"
@@ -64,6 +65,8 @@
     NSString *requestString = @"http://mobi.connectedcar360.net/api/?op=list";
     NSURL *url = [NSURL URLWithString:requestString];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    
+    [self showActivityIndicator];
 
     NSURLSessionDataTask *dataTask = [CONTROL_CENTER.defaultSession dataTaskWithRequest:urlRequest
                                                      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -73,26 +76,37 @@
                                                              NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
                                                              
                                                              if (!jsonError) {
-                                                                 [USERS_STORE parseUsersDataFromJsonObjectWithData:jsonData];
+                                                                 [USERS_STORE parseUsersDataFromJsonObjectWithData:jsonData withCompletion:^(BOOL success) {
+                                                                     // Hidding Activity indicator(already on main thread)
+                                                                     [weakSelf hideActivityIndicator];
+                                                                 }];
                                                                  
                                                              } else {
-                                                                 // Console error output
-                                                                 NSLog(@"- (void)loadData: error on parsing json: %@", jsonError.localizedDescription);
-                                                                 
-                                                                 // In case of Error - presenting Alert controller to the user
-                                                                 [weakSelf presentViewController:weakSelf.alertController animated:YES completion:nil];
+                                                                 [weakSelf handleJSONObjectError:jsonError];
                                                              }
                                                              
                                                          } else {
-                                                             // Console error output
-                                                             NSLog(@"- (void)loadData: error on executing dataTask: %@", error.localizedDescription);
-                                                             
-                                                             // In case of Error - presenting Alert controller to the user
-                                                             [weakSelf presentViewController:weakSelf.alertController animated:YES completion:nil];
+                                                             [weakSelf handleJSONObjectError:error];
                                                          }
                                                      }];
     // Execute
     [dataTask resume];
+}
+
+- (void)handleJSONObjectError:(NSError *)error
+{
+    // Console error output
+    NSLog(@"- (void)loadData: error on executing dataTask: %@", error.localizedDescription);
+    
+    if (![NSThread isMainThread]) {
+        // UI changes - executing on Main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Hidding Activity indicator
+            [self hideActivityIndicator];
+        });
+    }
+    
+    [self presentViewController:self.alertController animated:YES completion:nil];
 }
 
 @end
